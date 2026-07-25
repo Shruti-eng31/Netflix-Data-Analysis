@@ -2,6 +2,9 @@
 
 ![Netflix Logo](https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg)
 
+### [🔴 Live Demo: View the Interactive Dashboard Here](https://netflix-data-analysis-xyz.streamlit.app)
+*(Note: Replace the link above with your actual deployed Streamlit Community Cloud URL)*
+
 An end-to-end Data Science and Business Intelligence portfolio project analyzing the global Netflix catalog. This project demonstrates data engineering, exploratory data analysis (EDA), natural language processing (NLP), machine learning (Recommendation Systems), and interactive UI development using Streamlit.
 
 ## 🚀 Project Overview
