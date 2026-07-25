@@ -363,3 +363,14 @@ with tab5:
                 <p style="font-size: 14px; color: #ddd; margin: 0;">{row['description']}</p>
             </div>
             """, unsafe_allow_html=True)
+
+# --- FOOTER ---
+st.markdown("---")
+st.markdown("""
+<div style="text-align: center; color: #aaa; padding: 20px;">
+    <h3 style="color: #E50914; margin-bottom: 5px;">Shruti Singh</h3>
+    <p style="font-size: 16px; margin-bottom: 5px;">Data Scientist • Machine Learning Engineer • AI Developer</p>
+    <p style="font-size: 14px; margin-bottom: 20px; color: #888;">Turning Data into Actionable Intelligence through Analytics, Machine Learning, and Artificial Intelligence.</p>
+    <p style="font-size: 12px; color: #555;">© 2026 Shruti Singh. All Rights Reserved.</p>
+</div>
+""", unsafe_allow_html=True)
