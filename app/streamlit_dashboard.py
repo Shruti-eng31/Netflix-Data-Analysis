@@ -17,6 +17,140 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# --- CINEMATIC LANDING INTRO ---
+st.markdown("""
+<style>
+/* Cinematic Overlay Container */
+#cinematic-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #050505;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOutIntro 8s forwards;
+}
+
+@keyframes fadeOutIntro {
+  0% { opacity: 1; visibility: visible; }
+  85% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+/* Netflix 'N' Logo */
+.netflix-n-container {
+  position: relative;
+  width: 80px;
+  height: 130px;
+  transform: scale(0);
+  animation: scaleInN 1s cubic-bezier(0.19, 1, 0.22, 1) forwards 0.5s, zoomOutN 1.5s ease-in-out forwards 4.5s;
+}
+
+@keyframes scaleInN {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomOutN {
+  0% { transform: scale(1); opacity: 1; filter: blur(0px); }
+  100% { transform: scale(4); opacity: 0; filter: blur(20px); }
+}
+
+.netflix-n {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.netflix-n div {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #E50914;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+}
+
+.n-left { left: 0; width: 26px; z-index: 2; }
+.n-right { right: 0; width: 26px; z-index: 1; }
+.n-center {
+  left: 9px;
+  width: 30px;
+  height: 140px;
+  transform: rotate(-24deg);
+  transform-origin: top left;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  background: linear-gradient(to right, #E50914 0%, #ff4b55 50%, #B81D24 100%);
+}
+
+/* Portfolio Text Reveal */
+.intro-text {
+  position: absolute;
+  bottom: 25%;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 2.5s, fadeOutText 1.5s forwards 5.5s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutText {
+  0% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+  100% { opacity: 0; transform: translateY(-30px); filter: blur(10px); }
+}
+
+.intro-name {
+  font-size: 2.5rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 8px;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.intro-title {
+  font-size: 0.9rem;
+  color: #aaa;
+  letter-spacing: 0.15em;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.intro-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(45deg, #E50914, #ff4b55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+
+<div id="cinematic-intro">
+  <div class="netflix-n-container">
+    <div class="netflix-n">
+      <div class="n-left"></div>
+      <div class="n-center"></div>
+      <div class="n-right"></div>
+    </div>
+  </div>
+  <div class="intro-text">
+    <div class="intro-name">SHRUTI SINGH</div>
+    <div class="intro-title">DATA SCIENTIST • AI DEVELOPER</div>
+    <div class="intro-subtitle">Transforming Data into Intelligent Decisions</div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
 # --- CUSTOM CSS (NETFLIX THEME & GLASSMORPHISM) ---
 st.markdown("""
 <style>
